@@ -1,0 +1,33 @@
+<ion-view view-title="个人中心">
+	<ion-nav-buttons side="right">
+		<button class="button button-clear icon ion-compose" ng-click="doSomething()">
+		</button>
+	</ion-nav-buttons>
+  <ion-content overflow-scroll="false">
+    <ion-list type="card">
+    	<ion-item class="item-avatar-right" ng-click="show()">
+			<img src="img/ben.png">
+              头像
+    	</ion-item>
+    	<ion-item>
+			昵称<i class="badge">Serene</i>
+    	</ion-item>
+    	<ion-item>
+			个性签名
+            <i class="badge">今天你跑了么？</i>
+    	</ion-item>
+    	<ion-item class="item-divider">
+    	</ion-item>
+    	<a href="setting.html" class="item">设置</a>
+        <a class="item item-icon-right" ng-click="showAbout=!showAbout" ng-show='showAbout'>
+        关于<i class="icon ion-ios-arrow-up" ng-show='showAbout'></i>
+      </a>
+      <a class="item item-icon-right" ng-click="showAbout=!showAbout" ng-show='!showAbout'>
+        关于 <i class="icon ion-ios-arrow-down" ng-show='!showAbout'></i>
+      </a>
+      <div class="item item-text-wrap" ng-show='showAbout'>
+        <pre>【跑了么】是一款运动记录工具。</pre>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>
